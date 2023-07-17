@@ -78,6 +78,10 @@
 
 
 
+
+
+<div id="output"></div>
+
 <script>
   document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
@@ -94,8 +98,13 @@
     // Calculate the sum
     const sum = casteValue + salaryValue + lookingValue + groomValue + brideValue + groom2Value + heightValue;
 
-    // Display the sum
-    alert('Sum of values: ' + sum);
+    // Display the output on the website
+    const outputElement = document.getElementById('output');
+    if (sum < 3000000) {
+      outputElement.textContent = sum + '! You have to Game Up, blud, Running around doing nothing gonna take you nowhere fr!';
+    } else {
+      outputElement.textContent = sum +'! Keep your standards high like your salary, You worked till you dick turned soft, alright it does not matter until you keep them stacks coming, get  a hot bitch to spend those stacks';
+    }
   });
 </script>
 
@@ -167,6 +176,12 @@ input[type="submit"] {
 .col-md-4 {
   flex: 1 0 25%;
   max-width: 25%;
+}
+
+#output {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
 }
 
 
